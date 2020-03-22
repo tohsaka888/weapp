@@ -24,7 +24,12 @@ class App extends Component {
     pages: [
       'pages/index/index',
       'pages/index/login',
-      'pages/index/my'
+      'pages/index/my',
+      'pages/index/calendar',
+      'pages/index/day',
+      'pages/index/form',
+      'pages/index/rate',
+      'pages/index/vr'
     ],
     window: {
       backgroundTextStyle: 'light',

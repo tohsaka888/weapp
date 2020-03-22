@@ -19,14 +19,44 @@ function My(){
             setOpen(true)
         }
     }
-    const setList = () => {
+    const setList1 = () => {
         if(login === '登录'){
             setToast(true)
             setTimeout(() => {
                 setToast(false)
             }, 1000);
         }else{
-
+            Taro.redirectTo({url:'/pages/index/calendar'})
+        }
+    }
+    const setList2 = () => {
+        if(login === '登录'){
+            setToast(true)
+            setTimeout(() => {
+                setToast(false)
+            }, 1000);
+        }else{
+            Taro.redirectTo({url:'/pages/index/day'})
+        }
+    }
+    const setList3 = () => {
+        if(login === '登录'){
+            setToast(true)
+            setTimeout(() => {
+                setToast(false)
+            }, 1000);
+        }else{
+            Taro.redirectTo({url:'/pages/index/form'})
+        }
+    }
+    const setList4 = () => {
+        if(login === '登录'){
+            setToast(true)
+            setTimeout(() => {
+                setToast(false)
+            }, 1000);
+        }else{
+            Taro.redirectTo({url:'/pages/index/rate'})
         }
     }
     useEffect(()=>{
@@ -46,10 +76,10 @@ function My(){
             <View className='at-row at-row__justify--center'><AtAvatar image={img1} circle size='large'></AtAvatar></View>
             <View className='at-row at-row__justify--center'><View className='at-article__h1' style={{color:'white'}}>{title}</View></View>
             <AtList>
-                <AtListItem title='查看日历' onClick={setList} arrow='right'></AtListItem>
-                <AtListItem title='查看日程' onClick={setList} arrow='right'></AtListItem>
-                <AtListItem title='调查问卷' onClick={setList} arrow='right'></AtListItem>
-                <AtListItem title='评价我们' onClick={setList} arrow='right'></AtListItem>
+                <AtListItem title='查看日历' onClick={setList1} arrow='right'></AtListItem>
+                <AtListItem title='查看日程' onClick={setList2} arrow='right'></AtListItem>
+                <AtListItem title='实名认证' onClick={setList3} arrow='right'></AtListItem>
+                <AtListItem title='评价我们' onClick={setList4} arrow='right'></AtListItem>
             </AtList>
             <AtButton type='primary' onClick={setClick} customStyle={{marginTop:'20px'}} circle>{login}</AtButton>
             <AtModal isOpened={open} closeOnClickOverlay>
